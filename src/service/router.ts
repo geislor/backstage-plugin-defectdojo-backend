@@ -19,7 +19,7 @@ import express from 'express';
 import Router from 'express-promise-router';
 import { Logger } from 'winston';
 import { Config } from '@backstage/config';
-import { defectdojoRestApi } from '../api/defectdojoRestApi';
+import { DefectDojoRestApi } from '../api/DefectDojoRestApi';
 
 export interface RouterOptions {
   logger: Logger;
@@ -48,7 +48,7 @@ export async function createRouter(
     async (_request, response) => {
       logger.verbose('getting vulnarabilities..');
       const { projectName, projectVersion } = _request.params;
-      const defectdojo = new defectdojoRestApi(logger, host, token);
+      const defectdojo = new DefectDojoRestApi(logger, host, token);
       await defectdojo.auth();
       const vulns = await defectdojo.getVulnerabilities(projectName, projectVersion);      
       response.json(vulns);

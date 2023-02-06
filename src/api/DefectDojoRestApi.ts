@@ -8,7 +8,7 @@ import {
   BD_PROJECTS_API_RESPONSE,
 } from "./types";
 
-export class defectdojoRestApi {
+export class DefectDojoRestApi {
   private _bearer: string;
   public constructor(
     private readonly logger: Logger,
