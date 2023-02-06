@@ -66,7 +66,7 @@ index c4736a5..5822302 100644
 ```
 
 ## Continue with Frontend Plugin
-Follow the Docs from [README.md](https://github.com/deepan10/backstage-plugin-defectdojo)
+Follow the Docs from [README.md](https://github.com/geislor/backstage-plugin-defectdojo)
 
 ## Configuration
 
